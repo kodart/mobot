@@ -1,5 +1,6 @@
 use mobot_derive::BotRequest;
 use serde::{Deserialize, Serialize};
+use crate::api::voice::Voice;
 
 use super::{message::Message, query::InlineQuery, CallbackQuery, API};
 
@@ -38,6 +39,10 @@ pub struct Update {
     /// Callbakc query
     #[serde(skip_serializing_if = "Option::is_none")]
     pub callback_query: Option<CallbackQuery>,
+
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub voice: Option<Voice>,
+
 }
 
 /// Use this method to receive incoming updates using long or short

@@ -12,6 +12,7 @@ pub mod reply_markup;
 pub mod sticker;
 pub mod update;
 pub mod user;
+mod voice;
 
 pub use api::*;
 pub use botcommand::*;
